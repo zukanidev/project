@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "./css/main.css">
+    <title> E-commerce</title>
+
+
+</head>
+
+<body>
+   <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="imgs/logo.png" alt="Logo" />
+            </a>
+            <div class="metalurgica">
+                <h2>Metalúrgica Hard Iron</h2>
+            </div>
+        </div>
+
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href all-products="./home.html">Início</a>
+            </li>
+            <li>
+                <a  href all-products="./products.html">Produtos</a>
+            </li>
+            <li>
+                <a href all-products="./about.html">Sobre</a>
+            </li>
+            <li>
+                <a href all-products="./contact.html">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <aside class="autenticacao">
+        <a href all-products="./login.html">Login</a>
+        <a href all-products="./registrar.html" class="botao destaque">Registrar</a>
+    </aside>
+   </header>
+ 
+    <section id = 'conteudo'></section>
+
+    <script>
+        // hover e select
+        window.onhashchange = function(e) {
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldLink && oldLink.classList.remove('selected')
+            newLink && newLink.classList.add('selected')
+        }
+        // requisição ajax
+        document.querySelectorAll('[all-products]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('all-products'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+.header-1 {
+    color: white;
+    background-color: rgb(190, 58, 58);
+    height: 60px;
+    font-size: 28px;
+    text-align: center;
+}
+
+body {
+    background-color: rgba(190, 190, 206, 0.664);
+    margin: 0;
+}
+
+.allProducts {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.cabecalho {
+    background-color: #333;
+    height: 90px;
+    border-bottom: solid 5px #4faddb;
+    box-sizing: content-box;
+    margin-bottom: 20px;
+}
+
+.metalurgica {
+    display: inline-block;
+    color:#4faddb;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.menu  {
+    display: inline-block;
+    /* vertical-align:auto; */
+    /* padding: 15px 150px; */
+    /* height: 700px;   */
+    margin: 25px; 
+    /* margin-left: 100px;   */
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 15px 30px 30px 15px;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+    padding: 15px;
+    font-size: 1.5em;
+}
+
+.menu a {
+    padding: 15px;
+}
+
+.menu a:hover,
+.menu a.selected {
+    background-color: #4faddb;
+    color: #000;
+} 
+
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding: 15px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.inicial {
+    text-align: center; 
+}
+
+.inicial p {
+    width: 800px;
+    font-size: 40px;
+    margin-left: 550px;
+}
+/* p {
+    border: solid blue;
+    text-align: center;
+    width: min-content;
+    display: inline-block;
+    padding: 20px;
+    margin: 0px 20px;
+} */
+
+.autenticacao {
+    float: right;
+    height: 80px;
+    padding: 25px;
+}
+
+.botao {
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin: 10px;
+}
+
+.destaque{
+    background-color: red;
+    color: white;
+}
+/* Produtos  */
+
+.peca {
+    /* float: left; */
+    vertical-align: top;
+    display: inline-block;
+    font-family: Verdana, sans-serif;
+    border: solid 1px #CCC;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3);
+    height: 300px;
+    width: 260px;
+    margin: 5px 40px;
+    padding: 5px;
+}
+
+.peca a {
+    text-decoration: none;
+}
+
+.peca img {
+    width: 100%;
+    max-height: 50%;
+}
+
+.peca-info {
+    padding: 10px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.peca-info h4{
+    font-size: 1.4em;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.peca-preco {
+    float: right;
+    padding: 10px;
+}
+
+.preco-de {
+    text-decoration: line-through;
+    color: firebrick;
+}
+
+.preco-por {
+    color: green;
+    font-weight: bold;
+    font-size: 1.4em;;
+}
+
+/* Sobre */
+
+.about {
+    margin: 100px 600px;
+    text-indent: 25px;
+    width: 700px;
+    font-size: 30px;
+}
+
+.contato {
+    margin: 100px 600px;
+}
+.voltar {
+    padding: 50px;
+    text-decoration: none;
+}
+.log {
+    text-align: center;
+}
+
+.cadastro {
+    width: 300px;
+    border: #000;
+    margin-left: 800px;
+    text-align: center;
+}
+
+.cadastro h1 {
+    font-size: 38px;
+    font-weight: 100;
+}
+
+.cadastro input{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.cadastro #bb{
+    background-color: rgb(20, 197, 20);
+}
+
+.cadastro #bb:hover{
+    background-color: greenyellow;
+}
+/*cont*/
+.container-count{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    text-align: center;
+}
+
+button {
+    width: 30px;
+    height: 25px;
+    font-size: 15px;
+    background-color:rgba(136, 131, 131, 0.219);
+    color: black;
+    border-radius: 2em;
+    font-weight: bold;
+}
+button:hover {
+    background-color: rgb(41, 177, 70);
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 24px;
+}
+
+.log {
+    margin-left: 700px;
+}
+
+table caption{
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+thead #tr2 {
+   border-bottom: solid 3px #444; 
+}

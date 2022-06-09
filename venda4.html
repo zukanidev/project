@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "./css/main.css">
+    <title> E-commerce</title>
+
+
+</head>
+
+<body>
+   <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="imgs/logo.png" alt="Logo" />
+            </a>
+            <div class="metalurgica">
+                <h2>Metalúrgica Hard Iron</h2>
+            </div>
+        </div>
+    </header>
+    
+    <div class="voltar">
+        <a href="./Index.html" class="botao destaque"> Voltar ao início</a>
+    </div>
+    
+   <table align="center">
+    <caption>Compra</caption>
+    <thead>
+        <tr id="tr2">
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Tempo de Produção</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rolamento do eixo HrF2</td>
+            <td id="preco"></td>
+            <td>  <div class="container-count">            
+                <!-- adding button and heading to show the digits -->
+                <!--increment() and decrement() functions on button click-->
+                  <button onclick="increment()">+</button>  
+                  <h3 style="padding:5px;" id="counting"></h3>
+                  <button onclick="decrement()">-</button>         
+              </div>
+            </td>
+            <td id="tempo"></td>
+            <td style="font-weight: bold; font-size: 30px;" id="total"></td>
+        </tr>
+    </tbody>
+</table>
+
+<button style="margin-left: 900px; width:120px; height: 50px; font-size: 20px;" >Comprar</button>
+
+</body>
+
+ 
+<script>
+    var data = 0;
+var tempoProducao = 0;
+var tempoPeca = 10;  
+var valor = 60.00 ;
+var valorTotal = valor;
+
+  document.getElementById("tempo").innerText = `${tempoProducao} minutos`  
+  document.getElementById("total").innerText = `R$ ${valorTotal}`;
+  document.getElementById("preco").innerText = `R$ ${valor}`;
+  //printing default value of data that is 0 in h2 tag
+  document.getElementById("counting").innerText = data;
+    
+  //creation of increment function
+  function increment() {
+      data = data + 1;
+      valorTotal += valor;
+      tempoProducao += tempoPeca;
+      document.getElementById("counting").innerText = data;
+      document.getElementById("total").innerText = `R$ ${valorTotal.toFixed(2)}`;
+      document.getElementById("tempo").innerText = `${tempoProducao} minutos`
+  }
+  //creation of decrement function
+  function decrement() {
+      if( data > 0){ 
+      data = data - 1;
+      valorTotal -= valor;
+      tempoProducao -= tempoPeca;
+      }
+      document.getElementById("counting").innerText = data;
+      document.getElementById("total").innerText = `R$ ${valorTotal.toFixed(2)}`;
+      document.getElementById("tempo").innerText = `${tempoProducao} minutos`
+  }
+
+</script>
